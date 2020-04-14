@@ -8,7 +8,7 @@ it work because either it doesn't even build or it uses the production dependenc
 Just look at the two branches:
 
   - dagger_without_subcomponents_test_passes 
-    Works fine just like in Mitch's example
+    - Works fine just like in Mitch's example
   
   - app_using_dagger_subcomponents_test_fails
-    Here I build a MainComponent together with the Appcomponent and it just doesn't work
+    - Here I build a MainComponent together with the Appcomponent and it just doesn't work
