@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestDaggerApp</string>
+    <string name="yourname">YourName</string>
+    <string name="yourusername">YourUserName</string>
+    <string name="youremail">YourEmail</string>
+    <string name="get_user">GET USER</string>
+</resources>
