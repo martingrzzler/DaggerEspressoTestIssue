@@ -9,6 +9,5 @@ class TestBaseApplication : BaseApplication() {
             .builder()
             .application(this)
             .build()
-        appComponent.mainComponent().create()
     }
 }

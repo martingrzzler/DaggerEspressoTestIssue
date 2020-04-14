@@ -1,6 +1,7 @@
 package com.martingrzzler.testdaggerapp.di
 
 import android.app.Application
+import com.martingrzzler.testdaggerapp.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -8,7 +9,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
-        SubComponentsModule::class,
+        ViewModelModule::class,
         AppModule::class
     ]
 )
@@ -23,6 +24,7 @@ interface AppComponent{
         fun build(): AppComponent
     }
 
-    fun mainComponent(): MainComponent.Factory
+    fun inject(mainActivity: MainActivity)
+
 
 }

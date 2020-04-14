@@ -28,22 +28,20 @@ class MainActivityTest {
 
         (app.appComponent as TestAppComponent).inject(this)
 
-        // this doesn't work -> Cast Exception
-        // val testMainComponent = (app.appComponent.mainComponent().create() as TestMainComponent)
 
         launchActivity<MainActivity>()
 
         onView(withId(R.id.main)).check(matches(isDisplayed()))
-        onView(withText("Martin")).check(doesNotExist())
-        onView(withText("martingrzzler")).check(doesNotExist())
-        onView(withText("martin.gressler@code.berlin")).check(doesNotExist())
+        onView(withText("Max")).check(doesNotExist())
+        onView(withText("maximus")).check(doesNotExist())
+        onView(withText("maximus@maximal.com")).check(doesNotExist())
 
 
         onView(withId(R.id.getUserButton)).perform(click())
 
-        onView(withText("Martin")).check(matches(isDisplayed()))
-        onView(withText("martingrzzler")).check(matches(isDisplayed()))
-        onView(withText("martin.gressler@code.berlin")).check(matches(isDisplayed()))
+        onView(withText("Max")).check(matches(isDisplayed()))
+        onView(withText("maximus")).check(matches(isDisplayed()))
+        onView(withText("maximus@maximal.com")).check(matches(isDisplayed()))
 
 
     }

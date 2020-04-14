@@ -15,21 +15,21 @@ object TestAppModule  {
 
 
     @JvmStatic
-    @ActivityScope
+    @Singleton
     @Provides
     fun provideFakeApiService(): FakeApiService {
         return FakeApiService()
     }
 
     @JvmStatic
-    @ActivityScope
+    @Singleton
     @Provides
     fun provideFakeMainViewModelFactory(repository: FakeMainRepository): ViewModelProvider.Factory {
         return FakeMainViewModelFactory(repository)
     }
 
     @JvmStatic
-    @ActivityScope
+    @Singleton
     @Provides
     fun provideFakeMainRepository(apiService: FakeApiService): MainRepository {
         return FakeMainRepository(apiService)

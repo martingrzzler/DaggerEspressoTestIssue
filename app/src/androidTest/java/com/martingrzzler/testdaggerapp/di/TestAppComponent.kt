@@ -9,7 +9,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
-        TestSubComponents::class
+        TestAppModule::class
     ]
 )
 interface TestAppComponent: AppComponent{

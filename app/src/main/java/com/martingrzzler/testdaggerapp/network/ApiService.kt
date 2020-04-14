@@ -1,6 +1,5 @@
 package com.martingrzzler.testdaggerapp.network
 
-import com.martingrzzler.testdaggerapp.di.ActivityScope
 import retrofit2.http.GET
 
 interface ApiService {
