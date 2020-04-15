@@ -24,6 +24,6 @@ interface TestAppComponent: AppComponent{
     }
 
 
-    fun inject(mainActivityTest: MainActivityTest)
+    fun testMainComponentFactory(): TestMainComponent.Factory
 
 }

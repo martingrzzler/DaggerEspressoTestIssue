@@ -2,6 +2,7 @@ package com.martingrzzler.testdaggerapp
 
 import com.martingrzzler.testdaggerapp.di.DaggerTestAppComponent
 
+
 class TestBaseApplication : BaseApplication() {
 
     override fun initAppComponent() {
@@ -9,6 +10,5 @@ class TestBaseApplication : BaseApplication() {
             .builder()
             .application(this)
             .build()
-        appComponent.mainComponent().create()
     }
 }
