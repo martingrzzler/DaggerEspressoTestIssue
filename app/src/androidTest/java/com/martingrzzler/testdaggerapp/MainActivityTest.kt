@@ -26,10 +26,10 @@ class MainActivityTest {
         val app = InstrumentationRegistry.getInstrumentation()
             .targetContext.applicationContext as TestBaseApplication
 
-        (app.appComponent as TestAppComponent).inject(this)
+        val appComponent = (app.appComponent as TestAppComponent)
 
-        // this doesn't work -> Cast Exception
-        // val testMainComponent = (app.appComponent.mainComponent().create() as TestMainComponent)
+        val testMainComponent = appComponent.testMainComponentFactory().create()
+        testMainComponent.inject(this)
 
         launchActivity<MainActivity>()
 

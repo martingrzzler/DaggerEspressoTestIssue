@@ -11,4 +11,6 @@ interface TestMainComponent: MainComponent {
     interface Factory{
         fun create(): TestMainComponent
     }
+
+    fun inject(mainActivityTest: MainActivityTest)
 }
